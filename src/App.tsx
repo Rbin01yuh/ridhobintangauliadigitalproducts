@@ -11,7 +11,7 @@ export default function App() {
   const profile = {
     name: 'Ridho Bintang Aulia',
     jobTitle: 'Product Engineer | Fullstack Developer | Marketing & Sales',
-    whatsapp: '6281513164746',
+    whatsapp: '6281536164746',
     portfolio: 'https://ridhobintangauliaportfolio.netlify.app/',
     github: 'https://github.com/Rbin01yuh',
     linkedin: 'https://www.linkedin.com/in/ridhobintangaulia/',
