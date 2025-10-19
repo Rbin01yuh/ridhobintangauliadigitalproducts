@@ -1,0 +1,15 @@
+# Node/Vite project ignores
+node_modules/
+# Build outputs
+build/
+dist/
+out/
+# Env and local state
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
+# IDE/editor
+.vscode/
+.idea/
