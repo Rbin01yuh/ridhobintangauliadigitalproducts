@@ -6,6 +6,7 @@ import { SystemCard } from './components/SystemCard';
 import { Footer } from './components/Footer';
 import { products } from './data/products';
 import { systems } from './data/systems';
+import AppLoader from './components/AppLoader'
 
 export default function App() {
   const profile = {
@@ -19,6 +20,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen relative overflow-x-hidden">
+      <AppLoader />
       {/* Animated background */}
       <ColorwaveBackground />
 

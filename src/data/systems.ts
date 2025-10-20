@@ -6,6 +6,10 @@ export interface System {
   features: string[];
   icon: string;
   gradient: string;
+  // Optional override for gradient using hex colors
+  gradientColors?: [string, string];
+  // Optional proposal link (Google Drive)
+  proposalUrl?: string;
 }
 
 export const systems: System[] = [
@@ -22,6 +26,7 @@ export const systems: System[] = [
     ],
     icon: '📦',
     gradient: 'from-blue-500 to-cyan-500',
+    proposalUrl: 'https://drive.google.com/drive/folders/1mbn5o1lw9gjZT7vW3eeBfS_sf-3oql6a',
   },
   {
     id: '2',
@@ -36,6 +41,7 @@ export const systems: System[] = [
     ],
     icon: '💳',
     gradient: 'from-emerald-500 to-teal-500',
+    proposalUrl: 'https://drive.google.com/drive/folders/17Y800ZhFTf4rBT9h8VpIFSAHogc3S0oo',
   },
   {
     id: '3',
@@ -50,6 +56,23 @@ export const systems: System[] = [
     ],
     icon: '🎓',
     gradient: 'from-purple-500 to-pink-500',
+    proposalUrl: 'https://drive.google.com/drive/folders/1IDZysP5C5FebnstTvKfv8eiEqJWbZG5N',
+  },
+  {
+    id: '5',
+    title: 'Sistem Informasi Desa',
+    category: 'Enterprise',
+    description: 'Platform manajemen desa terpadu untuk administrasi, pelayanan publik, keuangan, aset, dan data kependudukan.',
+    features: [
+      'Manajemen Data Penduduk & KK',
+      'Layanan Surat Online (Domisili, SKTM, dsb.)',
+      'Keuangan & APBDes (Anggaran, Realisasi, Laporan)',
+      'Arsip & Inventaris Desa',
+    ],
+    icon: '🏘️',
+    gradient: 'from-red-600 to-red-700',
+    gradientColors: ['#dc2626', '#b91c1c'],
+    proposalUrl: 'https://drive.google.com/drive/folders/1_PAaqrwuP37GU5LXsI-w909-yPB7g_3g',
   },
   {
     id: '4',
@@ -64,5 +87,6 @@ export const systems: System[] = [
     ],
     icon: '🏢',
     gradient: 'from-orange-500 to-red-500',
+    proposalUrl: 'https://drive.google.com/',
   },
 ];
