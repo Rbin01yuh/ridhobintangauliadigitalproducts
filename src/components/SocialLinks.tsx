@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { MessageCircle, Globe, Github, Linkedin } from 'lucide-react';
+import { MessageCircle, Globe, Github, Linkedin, FileText } from 'lucide-react';
 import { generateContactMessage, generateWhatsAppLink } from '../utils/whatsapp';
 
 interface SocialLink {
@@ -16,9 +16,10 @@ interface SocialLinksProps {
   portfolio: string;
   github: string;
   linkedin: string;
+  cv: string;
 }
 
-export function SocialLinks({ whatsapp, portfolio, github, linkedin }: SocialLinksProps) {
+export function SocialLinks({ whatsapp, portfolio, github, linkedin, cv }: SocialLinksProps) {
   const links: SocialLink[] = [
     {
       icon: <MessageCircle className="w-5 h-5" />,
@@ -44,16 +45,23 @@ export function SocialLinks({ whatsapp, portfolio, github, linkedin }: SocialLin
       href: linkedin,
       color: 'from-blue-600 to-blue-500',
     },
+    {
+      icon: <FileText className="w-5 h-5" />,
+      label: 'CV',
+      href: cv,
+      color: 'from-teal-600 to-teal-500',
+    },
   ];
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto">
+    <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4 max-w-4xl mx-auto">
       {links.map((link, index) => (
         <motion.a
           key={link.label}
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={link.label}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 + index * 0.1 }}

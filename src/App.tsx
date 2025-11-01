@@ -6,7 +6,8 @@ import { SystemCard } from './components/SystemCard';
 import { Footer } from './components/Footer';
 import { products } from './data/products';
 import { systems } from './data/systems';
-import AppLoader from './components/AppLoader'
+import AppLoader from './components/AppLoader';
+import { MusicPlayer } from './components/MusicPlayer';
 
 export default function App() {
   const profile = {
@@ -16,6 +17,7 @@ export default function App() {
     portfolio: 'https://ridhobintangauliaportfolio.netlify.app/',
     github: 'https://github.com/Rbin01yuh',
     linkedin: 'https://www.linkedin.com/in/ridhobintangaulia/',
+    cv: 'https://drive.google.com/file/d/1H4iglersSU_ckoPMguC1nGBPYqyKuEdx/view?usp=sharing',
   };
 
   return (
@@ -36,6 +38,7 @@ export default function App() {
             portfolio={profile.portfolio}
             github={profile.github}
             linkedin={profile.linkedin}
+            cv={profile.cv}
           />
 
           {/* Digital Products Section */}
@@ -83,6 +86,9 @@ export default function App() {
               ))}
             </div>
           </section>
+
+          {/* Music Player */}
+          <MusicPlayer />
 
           {/* Footer */}
           <Footer />
